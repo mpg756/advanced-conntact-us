@@ -9,7 +9,7 @@ It saves information into the database. Than this information can be accessible 
 `. There you can seed grid with all the data. 
 
 Clicking `Action > Select > Edit` on the item you will be redirected to form where you can response to the user.
-##Installation
+## Installation
 In your root project directory run
 
     composer require val/advanced-contact-us
@@ -29,7 +29,7 @@ So you can easily search info about the user.
 
 New messages got `Unprocessed` tag. While you response it changes to `Processed`.
 
-####Filters
+#### Filters
 In grid view you can use filters. List of them: 
 - Id
 - Created
