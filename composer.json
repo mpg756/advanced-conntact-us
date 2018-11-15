@@ -1,0 +1,26 @@
+{
+  "name": "val/advanced-contact-us",
+  "description": "A Magento 2 module that adds functionality to collect all information from Contact Us page and process it in admin",
+  "require": {
+    "php": "~7.0.13|~7.1.0",
+    "magento/module-contact": "~100.0",
+    "magento/module-config": "101.0.*",
+    "magento/module-store": "100.2.*",
+    "magento/module-customer": "101.0.*",
+    "magento/module-cms": "102.0.*",
+    "magento/framework": "101.0.*"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "Apache-2.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Val\\AdvancedContactUs\\": ""
+    }
+  }
+}

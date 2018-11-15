@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Val_AdvancedContactUs::heading" title="AdvancedContactUs" translate="title" module="Val_AdvancedContactUs" parent="Magento_Backend::content" sortOrder="50" dependsOnModule="Val_AdvancedContactUs" resource="Val_AdvancedContactUs::config"/>
+        <add id="Val_AdvancedContactUs::email_list" title="Emails list" translate="title" module="Val_AdvancedContactUs" parent="Val_AdvancedContactUs::heading" sortOrder="10" dependsOnModule="Val_AdvancedContactUs" action="advancedcontact/email" resource="Val_AdvancedContactUs::config"/>
+    </menu>
+</config>

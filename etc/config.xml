@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <advanced_contact_us>
+            <general>
+                <enabled>1</enabled>
+                <template>advanced_contact_us_general_template</template>
+            </general>
+        </advanced_contact_us>
+    </default>
+</config>

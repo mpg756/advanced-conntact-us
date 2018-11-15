@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Val\AdvancedContactUs\Api\Data\MessagesSearchResultInterface"
+                type="Magento\Framework\Api\SearchResults" />
+    <preference for="Val\AdvancedContactUs\Api\Data\MessageInterface"
+                type="Val\AdvancedContactUs\Model\Message" />
+    <preference for="Val\AdvancedContactUs\Api\MessageRepositoryInterface"
+                type="Val\AdvancedContactUs\Model\MessageRepository" />
+
+    <type name="Magento\Contact\Controller\Index\Post">
+        <plugin name="contactus_advanced_plugin_after_post" type="Val\AdvancedContactUs\Plugin\GetDataFromPost" sortOrder="1" disabled="false" />
+    </type>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="advancedcontact_email_listing_data_source" xsi:type="string">Val\AdvancedContactUs\Model\ResourceModel\Post\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Val\AdvancedContactUs\Model\ResourceModel\Post\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">advanced_contact_us</argument>
+            <argument name="resourceModel" xsi:type="string">Val\AdvancedContactUs\Model\ResourceModel\Message</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Val\AdvancedContactUs\Ui\Component\DataProvider">
+        <arguments>
+            <argument name="additionalFilterPool" xsi:type="array">
+                <item name="fulltext" xsi:type="object">Val\AdvancedContactUs\Ui\Component\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,17 @@
+{{template config_path="design/email/header_template"}} <!-- path of template header-->
+<!--@subject {{var response_header}}  @-->
+
+<table>
+    <tr class="email-intro">
+        <td>
+            <p class="greeting">{{trans "Hello, %user_name, thank you for your request" user_name=$user_name}}</p>
+        </td>
+    </tr>
+    <tr class="email-information">
+        <td>
+            <p>{{var response_body}}</p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}} <!--footer of template-->
