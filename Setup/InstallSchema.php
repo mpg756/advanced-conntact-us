@@ -51,7 +51,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                 MessageInterface::STORE_ID,
                 Table::TYPE_SMALLINT,
                 5,
-                ['nullable' => false, 'unsigned' => true],
+                ['unsigned' => true],
                 'Store Id'
             )->addColumn(
                 MessageInterface::NAME,
