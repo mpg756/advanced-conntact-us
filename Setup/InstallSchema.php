@@ -51,31 +51,31 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                 MessageInterface::STORE_ID,
                 Table::TYPE_SMALLINT,
                 5,
-                ['nullable => false', 'unsigned' => true],
+                ['nullable' => false, 'unsigned' => true],
                 'Store Id'
             )->addColumn(
                 MessageInterface::NAME,
                 Table::TYPE_TEXT,
                 64,
-                ['nullable => false'],
+                ['nullable' => false],
                 'User Name'
             )->addColumn(
                 MessageInterface::EMAIL,
                 Table::TYPE_TEXT,
                 128,
-                ['nullable => false'],
+                ['nullable' => false],
                 'Email'
             )->addColumn(
                 MessageInterface::PHONE,
                 Table::TYPE_TEXT,
                 255,
-                ['nullable => true'],
+                ['nullable' => true],
                 'Phone number'
             )->addColumn(
                 MessageInterface::MESSAGE,
                 Table::TYPE_TEXT,
                 null,
-                ['nullable => true'],
+                ['nullable' => true],
                 'Message'
             )->addColumn(
                 MessageInterface::CREATED_AT,
